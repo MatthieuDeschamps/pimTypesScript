@@ -1,0 +1,7 @@
+{
+  "mongodb": {
+    "uri": "mongodb://localhost:27017/product",
+    "collection": "products",
+    "maxDocs": 1000
+  }
+}
