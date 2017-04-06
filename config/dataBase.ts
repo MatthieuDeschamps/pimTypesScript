@@ -5,10 +5,14 @@ var db = new mongodb.Db('product', serverMongo, { w: 1 });
 db.open(function(){
   console.log(`DataBase connect -> ok`);  
 });*/
-
-  // mongodb location
-  db: 'mongodb://localhost:27017/product',
-  collection: 'products',
+  mongodb: {
+    // mongodb location
+    db: 'mongodb://localhost:27017/product',
+    // mongodB Collection
+    collection: 'products',
+    // max documents
+    maxDocs: 1000,
+  },
 
   // port
   port: process.env.PORT || 3005,
@@ -18,8 +22,10 @@ db.open(function(){
   test_db: 'blog-api-test',
   test_port: 3001,
 
-  // secret for jwt
-  secret: 'secret'
 };
+
+/*const options = {
+
+}*/
 
 export default config;
